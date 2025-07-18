@@ -20,7 +20,7 @@ html, body {
 }
 .container{
     margin: 0
-    height: 100vh;
+    
     
 }
 .footer {
@@ -72,7 +72,7 @@ html, body {
    justify-content: space-between;
    background-color:#FFE5BC;
    width: 100%;
-  
+  z-index: 1000;
    margin: 0;
    padding: 0;
   }
@@ -114,7 +114,11 @@ html, body {
     width: 500px;
     font-size: 20px;
     text-align: center;
+    border-radius: 20px;
+    border: 3px solid #F47B50;
+    padding: 20px;
   }
+
   .box{
     display: flex;
     align-items: center;
@@ -134,7 +138,7 @@ html, body {
   .kontakt_hl{
     width: 250px;
     margin-left: 200px;
-    
+    text-align: center;
   }
   .kontakt2{
     border-radius: 20px;
@@ -147,8 +151,13 @@ html, body {
     border-radius: 20px;
     border: 3px solid #F47B50;
     font-size: 20px;
+    text-align: center;
     padding: 20px;
     width: 500px;
+  }
+  .novinky_hl{
+    margin-left: 150px;
+    
   }
   .tapinka{
     width: 20%;
@@ -224,4 +233,20 @@ html, body {
   .form{
     
   }
+
+.facebook-container {
+  padding: 20px;
+  max-width: 100%;
+  margin: 40px 150px;
+  background-color: #FFE5BC;
+  box-sizing: border-box;
+}
+.facebook-container iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+  border-radius: 10px !important;
+  overflow: hidden;
+}
+
+
 

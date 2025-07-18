@@ -35,7 +35,7 @@
                     <div class="rectangle"></div>
                     <li class="menu__item"><a href="#nasipejsci" class="menu__link">naši pejsci</a></li>
                     <div class="rectangle"></div>
-                    <li class="menu__item"><a href="#kontakt" class="menu__link">kontakt</a></li>
+                    <li class="menu__item"><a href="#kont" class="menu__link">kontakt</a></li>
                 </ul>
             </nav>
             
@@ -44,7 +44,7 @@
         <div class="box">
         
         <div class="text_onas">
-            <p id = "onas" class="text">Naše chovatelská farma se specializuje na plemeno Borzoi, vznešené a elegantní ruské chrty, kteří jsou známí svou rychlostí, inteligencí a věrným charakterem. Naším cílem je chov zdravých, standardu odpovídajících jedinců s vynikající povahou.</p>
+            <p id = "onas" class="text">Naše chovatelská stanice se specializuje na plemeno Borzoi, vznešené a elegantní ruské chrty, kteří jsou známí svou rychlostí, inteligencí a věrným charakterem. Naším cílem je chov zdravých, standardu odpovídajících jedinců s vynikající povahou.</p>
         </div>
         <img class="first_image" src="images/IMG_0361.jpeg" alt="pejsci">
         </div>
@@ -52,10 +52,29 @@
             <p id = "novinky" class="novinky">Momentálně očekáváme příchod nových štěňátek. O aktuálních informacích vás budeme informovat. Pokud máte zájem, vyplňte náš formulář <a href="#formular" class="formular_odkaz">tu</a>.</p>
         </div>
         <div class="kontakt_hl">
-            <p id = "kontakt" class="kontakt2">Patricia Borošová <br>+420 774 329 572 <br>borzoi@gmail.com  </p>
+            <p id = "kont" class="kontakt2">Patricia Borošová <br>+420 774 329 572 <br>borzoi@gmail.com  </p>
         </div>
+
+<div class="facebook-container">
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" 
+    src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v19.0" nonce="abc123">
+  </script>
+
+  <div class="fb-page" 
+       data-href="https://www.facebook.com/rakovskyborzois?ref=embed_page" 
+       data-tabs="timeline" 
+       data-small-header="false"
+       data-height="700"
+       data-adapt-container-width="true" 
+       data-hide-cover="false" 
+       data-show-facepile="true">
+  </div>
+</div>
+
+
         
-        <div class="tapka"><a href="index.html" class="tapka_odkaz"><img class="tapka" src="images/Group 4588(5).svg" alt="ťapka"></a></div>
+        <div class="tapka"><a href="/" class="tapka_odkaz"><img class="tapka" src="images/Group 4588(5).svg" alt="ťapka"></a></div>
     </div> 
         <div class="footer">
             <form id = "formular" class = "form" action="" method = 'post'>
@@ -110,5 +129,19 @@
                 </div>
                 </div>   
         
+
+<script>
+  window.addEventListener('load', () => {
+    const resizeFacebookPlugin = () => {
+      const fbIframe = document.querySelector('.facebook-container iframe');
+      if (fbIframe) {
+        fbIframe.style.width = '100%';
+        fbIframe.style.maxWidth = '100%';
+      }
+    };
+    setTimeout(resizeFacebookPlugin, 1000); // malá prodleva na načtení iframe
+  });
+</script>
+
 </body>
 </html>
