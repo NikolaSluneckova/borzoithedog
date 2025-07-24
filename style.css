@@ -71,7 +71,7 @@ html, body {
     order: 1;
     margin: 40px 100px;
   }
-  .toggler, .toggler3, .menu__checkbox{
+  .toggler, .toggler3, .menu__checkbox, .hamburger{
     display: none;
   }
   .menu__list {
@@ -468,6 +468,7 @@ input:focus {
 .menu__checkbox {
   display: none;
 }
+
 }
 @media (max-width: 768px) {
   .menu__list {
