@@ -19,49 +19,60 @@
 </head>
 <body>
     <div class= "container">
-    
-        <div class="hlavicka">
-            <div><h1 class="nadpis"><a href="/" class="nadpis_odkaz">borzoi</a></h1></div>
-            
-            <nav class="menu">
-            <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
-            <label for="menu-checkbox" class="menu__toggler"><img class="toggler" src="images/menu(1).png" alt="menu">
-                <img class="toggler3" src="images/krizek.png" alt="menu"></label>
 
-            <ul class="menu__list">
-                    <li class="menu__item"><a href="#onas" class="menu__link">o nás</a></li>
-                    <div class="rectangle"></div>
-                    <li class="menu__item"><a href="#novinky" class="menu__link">novinky</a></li>
-                    <div class="rectangle"></div>
-                    <li class="menu__item"><a href="#nasipejsci" class="menu__link">naši pejsci</a></li>
-                    <div class="rectangle"></div>
-                    <li class="menu__item"><a href="#kont" class="menu__link">kontakt</a></li>
-                </ul>
-            </nav>
-            
-        </div>
-        <div class="rectangle2"></div>
+<hlavicka id="mainHeader" class="hlavicka">
+  <a href="#" class="nadpis_odkaz">
+    <h1 class="nadpis">Rakovsky borzois</h1>
+  </a>
+
+  <input type="checkbox" id="menu-toggle" class="menu__checkbox">
+  <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+  <nav class="menu">
+    <ul class="menu__list">
+      <li class="menu__item"><a href="#onas" class="menu__link">about us</a></li>
+      <li class="menu__item"><a href="#gallery" class="menu__link">gallery</a></li>
+      <li class="menu__item"><a href="#kont" class="menu__link">contact</a></li>
+    </ul>
+  </nav>
+</hlavicka>
+        
         <div class="box">
         
         <div class="text_onas">
-            <p id = "onas" class="text">Naše chovatelská stanice se specializuje na plemeno Borzoi, vznešené a elegantní ruské chrty, kteří jsou známí svou rychlostí, inteligencí a věrným charakterem. Naším cílem je chov zdravých, standardu odpovídajících jedinců s vynikající povahou.</p>
+            <p id = "onas" class="text">Welcome! We're a small kennel in Slovakia, focused on breeding healthy borzois of good temperament and a correct type. For more info check our FB <a href="#fb" class="fb-root">wall</a> :)</p>
         </div>
-        <img class="first_image" src="images/IMG_0361.jpeg" alt="pejsci">
+        <div id= "gallery" class="gallery">
+  <img src="images/IMG_0361.jpeg" alt="Obrázek 1" class="thumb">
+  <img src="images/Lenny1.jpg" alt="Obrázek 2" class="thumb">
+  <img src="images/Lenny2.jpg" alt="Obrázek 3" class="thumb">
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-img" src="" alt="">
+  <div class="lightbox-controls">
+    <button id="prev">←</button>
+    <button id="next">→</button>
+  </div>
+</div>
+
         </div>
         <div class="novinky_hl">
             <p id = "novinky" class="novinky">Momentálně očekáváme příchod nových štěňátek. O aktuálních informacích vás budeme informovat. Pokud máte zájem, vyplňte náš formulář <a href="#formular" class="formular_odkaz">tu</a>.</p>
         </div>
         <div class="kontakt_hl">
-            <p id = "kont" class="kontakt2">Patricia Borošová <br>+420 774 329 572 <br>borzoi@gmail.com  </p>
+            <p id = "kont" class="kontakt2">Patricia Borošová <br>+421 910 988 442 <br>borzoi@gmail.com  </p>
         </div>
-
+<div class = "contact">
 <div class="facebook-container">
   <div id="fb-root"></div>
   <script async defer crossorigin="anonymous" 
     src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v19.0" nonce="abc123">
   </script>
 
-  <div class="fb-page" 
+  <div id= "fb" class="fb-page" 
        data-href="https://www.facebook.com/rakovskyborzois?ref=embed_page" 
        data-tabs="timeline" 
        data-small-header="false"
@@ -70,64 +81,78 @@
        data-hide-cover="false" 
        data-show-facepile="true">
   </div>
+</div>   
+   <form id="formular" class="form" action="#" method="post">
+  <div class="formular">
+    <label for="jmeno">jméno:</label>
+    <input
+      type="text"
+      name="jmeno"
+      id="jmeno"
+      size="15"
+      maxlength="20"
+      required>
+  </div>
+
+  <div class="formular">
+    <label for="prijmeni">příjmení:</label>
+    <input
+      type="text"
+      name="prijmeni"
+      id="prijmeni"
+      size="15"
+      maxlength="20"
+      required>
+  </div>
+
+  <div class="formular">
+    <label for="telefon">telefon:</label>
+    <input
+      type="tel"
+      name="telefon"
+      id="telefon"
+      size="15"
+      maxlength="20"
+      pattern="[0-9+ ]+"
+      required>
+  </div>
+
+  <div class="formular">
+    <label for="email">e-mail:</label>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      size="15"
+      maxlength="30"
+      required>
+  </div>
+
+  <div class="formular">
+    <label class="custom-checkbox">
+  <input type="checkbox" name="souhlas" required>
+  <span class="checkmark"></span>
+  souhlasím s podmínkami
+</label>
+  </div>
+
+  <button class="tlacitko" type="submit">
+    <p>odeslat</p>
+    <img class="tapinka" src="images/Group 4588(6).svg" alt="tapinka">
+  </button>
+</form>
+</div> 
+<div class="tapka"><a href="#" class="tapka_odkaz"><img class="tapka" src="images/Group 4588(5).svg" alt="ťapka"></a></div>
 </div>
-
-
-        
-        <div class="tapka"><a href="/" class="tapka_odkaz"><img class="tapka" src="images/Group 4588(5).svg" alt="ťapka"></a></div>
-    </div> 
-        <div class="footer">
-            <form id = "formular" class = "form" action="" method = 'post'>
-                <div class="formular">
-                    <label for="jmeno">Jméno:</label>
-                    <input
-                    type="text"
-                    name="jmeno"
-                    id="jmeno"
-                    size="15"
-                    maxlength="20"></div>
-                <div class = "formular">
-                    <label for="prijmeni">Příjmení:</label>
-                    <input
-                    type="text"
-                    name="prijmeni"
-                    id="prijmeni"
-                    size="15"
-                    maxlength="20"></div>   
-                <div class = "formular">
-                    <label for="telefon">Telefon:</label>
-                    <input
-                    type="tel"
-                    name="telefon"
-                    id="telefon"
-                    size="15"
-                    maxlength="20"></div> 
-                <div class = "formular">
-                    <label for="e-mail">E-mail:</label>
-                    <input
-                    type="text"
-                    name="email"
-                    id="e-mail"
-                    size="15"
-                    maxlength="30"></div> 
-                <div class="checkbox">
-                    <input class= "checkboxik" type="checkbox" name="souhlas" id="checkbox" value="ano">
-                    <label class= "souhlas" for="checkbox"><img class="boxik" src="images/Group 4590(1).svg">souhlasím s podmínkami</label>
-                 </div> 
-                    <button class="tlacitko" type = "submit">
-                        <p>odeslat</p>
-                        <img class="tapinka" src="images/Group 4588(6).svg" alt="tapinka">
-                    </button>
-                </form>
-                <div class="footer_grid">
-                        <div class="adresa"> <a href="https://www.google.com/maps/place/caf%C4%93+borzoi/@50.1068973,14.3925522,17z/data=!3m1!4b1!4m6!3m5!1s0x470b95e5d0bc364d:0x5c9793caec8ac248!8m2!3d50.1068973!4d14.3951271!16s%2Fg%2F11jrcsyy73?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D" class="adresa_odkaz">Zelená 943/7, Praha 6 Bubeneč</a> </div>
-                        <div class="copy"> ©2024 borzoi</div>
-                        <div class="kontakt">+420 774 329 572 <br>borzoi@gmail.com
-                           <!-- <div class="soc"><a href="https://www.instagram.com/cafe.borzoi/?hl=cs"><img class= "ig" src="/images/instagram(2).svg" alt="instagram"></a> 
-                                <a href="https://www.facebook.com/cafeborzoi/?locale=cs_CZ"><img class= "facebook" src="/images/facebook(1).svg" alt="facebook"></a></div></div>-->
-                </div>
-                </div>
-                </div>   
+<div id="mainFooter" class="footer">
+<div class="soc"><a href="https://www.instagram.com/borzoi.rakovsky/?hl=cs"><img class= "ig" src="images/instagram.svg" alt="instagram"></a> 
+                    <a href="https://www.facebook.com/rakovskyborzois?ref=embed_page"><img class= "facebook" src="images/facebook.svg" alt="facebook"></a></div>
+<div class="language"> 
+  <div><a href="#" class="cz_page">CZ</a></div>
+  <div><a href="#" class="eng_page">ENG</a></div> 
+</div>
+  </div>
+               
         
 
 <script>
@@ -140,6 +165,64 @@
       }
     };
     setTimeout(resizeFacebookPlugin, 1000); // malá prodleva na načtení iframe
+  });
+</script>
+
+<script>
+  const header = document.getElementById('mainHeader');
+  const footer = document.getElementById('mainFooter');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      header.classList.add('scrolled');
+      footer.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+      footer.classList.remove('scrolled');
+    }
+  });
+</script>
+
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.querySelector('.lightbox-img');
+  const thumbnails = document.querySelectorAll('.thumb');
+  const closeBtn = document.querySelector('.close');
+  const prevBtn = document.getElementById('prev');
+  const nextBtn = document.getElementById('next');
+
+  let currentIndex = 0;
+
+  const showLightbox = (index) => {
+    currentIndex = index;
+    lightboxImg.src = thumbnails[currentIndex].src;
+    lightbox.classList.add('show');
+  };
+
+  thumbnails.forEach((thumb, index) => {
+    thumb.addEventListener('click', () => showLightbox(index));
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.classList.remove('show');
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
+    lightboxImg.src = thumbnails[currentIndex].src;
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % thumbnails.length;
+    lightboxImg.src = thumbnails[currentIndex].src;
+  });
+
+  // Zavření lightboxu kliknutím mimo obrázek
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove('show');
+    }
   });
 </script>
 
