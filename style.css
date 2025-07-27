@@ -508,9 +508,23 @@ input:focus {
     flex-wrap: wrap;
     align-items: center;
     padding: 10px;
+    
   }
 
   .nadpis {
     font-size: 26px;
-    margin-left: 20px;
+    margin-left: 40px;
+    
   }}
+
+  @media (max-width: 420px) {
+    .nadpis{
+      font-size: 18px;
+    }
+    .hamburger{
+      font-size: 26px;
+    }
+    .menu__item{
+      font-size: 18px;
+    }
+  }
